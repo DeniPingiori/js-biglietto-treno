@@ -12,3 +12,10 @@ Numero minimo di push: 6
 scomposizione esercizio: 
 1. stringa che chieda all'utente quanti km vuole percorrere
 2. stringa che chiede all'utente quanti anni ha
+3. se l'user ha meno di 18 anni applica uno sconto del 20%
+    3.1 se l'user ha più di 65 anni applica uno sconto del 40%
+    3.2 altrimenti nessuno sconto
+4. calcola prezzo totale delm biglietto
+    4.1 prezzo del biglietto 0,21€/km
+5. fai uscire a video il prezzo finito
+
