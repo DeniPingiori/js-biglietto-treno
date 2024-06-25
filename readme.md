@@ -10,3 +10,5 @@ Ricordatevi di fare il file README.md in cui scomponete il problema in sotto pro
 Numero minimo di push: 6
 
 scomposizione esercizio: 
+1. stringa che chieda all'utente quanti km vuole percorrere
+2. stringa che chiede all'utente quanti anni ha
