@@ -9,3 +9,4 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 Ricordatevi di fare il file README.md in cui scomponete il problema in sotto problemi
 Numero minimo di push: 6
 
+scomposizione esercizio: 
