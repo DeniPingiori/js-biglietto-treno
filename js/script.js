@@ -5,28 +5,33 @@ alert('test');
 let number_km = prompt ('inserisci km da percorrere');
 console.log(number_km);
 //prezzo 
-let prezzo = 0.21 * Number(number_km);
+let prezzo_base = 0.21 * Number(number_km);
 console.log(prezzo);
 
 //stringa che chiede all'utente quanti anni ha
 let eta = Number(prompt ('inserisci la tua età'));
 console.log(eta);
 
-//calcolare lo sconto 
-let price = 0;
-let ticket_price= 0.21; 
+//variabile che contiene prezzo finale
+let prezzo_finale= prezzo;
+
+
 
 //se user ha - di 18 anni
 if (eta<18) {
-    price = (ticket_price - ((ticket_price / 100) * 20));
+    //calcolare sconto
+    let sconto = prezzo_base * 0.20;
+    //calcono il prezzo finale
+    prezzo_base = prezzo_base - sconto;
     document.getElementById('result').innerHTML = 'hai diritto allo sconto del 20%' ;
 }
 
 //se user ha + di 65 anni
 else if (eta>65) {
     //calcolare sconto
+    let sconto = prezzo_base * 0.40;
     //prezzo= prezo-sconto;
-    price = (ticket_price - ((ticket_price / 100) * 40));
+    prezzo_base = prezzo_base - sconto;
     document.getElementById('result').innerHTML = 'hai diritto allo sconto del 40%' ;
 }
 
@@ -35,13 +40,9 @@ else  {
     document.getElementById('result').innerHTML = 'non hai diritto allo sconto' ;
 }
 
-//prezzo totale biglietto sapendo che 0.21€/km
-let final_price = ticket_price;
+//prezzo arrotondato a 2 decimali
+let prezzo = prezzo_finale.toFixed(2);
+console.log(prezzo);
 
-if (eta < 18 || eta > 65) {
-    final_price = (ticket_price-price);
-}
-
-else {
-    final_price = ticket_price;
-}
+//mostro il prezzo nella pagina
+document.getElementById('prezzo_finale').innerText = 'il prezzo finale è di: ${prezzo}€';
